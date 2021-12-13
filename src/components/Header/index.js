@@ -32,7 +32,7 @@ const Header = props => {
           <Link to="/" className="nav-link">
             <img
               className="website-logo"
-              src="https://res.cloudinary.com/dkobk5oao/image/upload/v1633608363/Frame_274_mqin4h.png"
+              src="https://res.cloudinary.com/dm4o2tuyu/image/upload/v1639382999/Vector_yumvdx.png"
               alt="website logo"
             />
           </Link>

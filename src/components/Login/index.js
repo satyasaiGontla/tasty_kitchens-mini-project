@@ -104,7 +104,7 @@ class Login extends Component {
         <div className="login-container">
           <form className="form-container" onSubmit={this.submitForm}>
             <img
-              src="https://res.cloudinary.com/dkobk5oao/image/upload/v1633608363/Frame_274_mqin4h.png"
+              src="https://res.cloudinary.com/dm4o2tuyu/image/upload/v1639382692/logo_rwnzhy.png"
               className="login-logo-desktop-image"
               alt="website logo"
             />
@@ -119,7 +119,7 @@ class Login extends Component {
           </form>
         </div>
         <img
-          src="https://res.cloudinary.com/dkobk5oao/image/upload/v1633529531/Rectangle_1456_t19ink.png"
+          src="https://res.cloudinary.com/dm4o2tuyu/image/upload/v1639382202/Rectangle_14561x_go5mbz.png"
           className="login-image"
           alt="website login"
         />
