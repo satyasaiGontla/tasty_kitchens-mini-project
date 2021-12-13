@@ -52,8 +52,11 @@
 }
 
 .social-website-icon {
-  width: 40px;
   height: 40px;
+  width: 40px;
+  left: 4px;
+  top: 4px;
+  border-radius: 0px;
   color: #ffffff;
   margin: 10px;
 }
