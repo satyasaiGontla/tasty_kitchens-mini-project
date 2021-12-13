@@ -27,14 +27,14 @@
   }
 }
 
-.login-website-logo-mobile-image {
+.login-logo-mobile-image {
   width: 380px;
   height: 380px;
   align-self: flex-end;
 }
 
 @media screen and (min-width: 992px) {
-  .login-website-logo-mobile-image {
+  .login-logo-mobile-image {
     display: none;
   }
 }
@@ -47,18 +47,19 @@
   .login-image {
     width: 40%;
     flex-shrink: 1;
-    height: 100vh;
+    height: 1024px;
+    width: 705px;
     display: block;
   }
 }
 
-.login-website-logo-desktop-image {
-  width: 53px;
-  height: 43px;
+.login-logo-desktop-image {
+  width: 55px;
+  height: 45px;
 }
 
 @media screen and (max-width: 991px) {
-  .login-website-logo-desktop-image {
+  .login-logo-desktop-image {
     display: none;
   }
 }
@@ -104,6 +105,11 @@
   font-size: 32px;
   line-height: 40px;
   color: #0f172a;
+  height: 40px;
+  width: 80px;
+  left: 353px;
+  top: 386px;
+  border-radius: nullpx;
 }
 
 @media screen and (max-width: 992px) {
@@ -159,8 +165,6 @@
   font-weight: bold;
   font-size: 14px;
   color: #ffffff;
-  height: 40px;
-  width: 100%;
   margin-top: 20px;
   margin-bottom: 2px;
   background: #f7931e;
@@ -168,6 +172,10 @@
   border: none;
   outline: none;
   cursor: pointer;
+  height: 40px;
+  width: 360px;
+  left: 0px;
+  top: 0px;
 }
 
 .error-message {

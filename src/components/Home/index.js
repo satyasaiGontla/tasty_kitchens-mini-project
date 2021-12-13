@@ -1,9 +1,25 @@
-import React from 'react'
+import Cookies from 'js-cookie'
+import {Redirect} from 'react-router-dom'
 
-class Home extends React.Component {
-  render() {
-    return <h1>Tasty Kitchens</h1>
+import Header from '../Header'
+import Carousel from '../Carousel'
+
+import './index.css'
+
+const Home = () => {
+  const jwtToken = Cookies.get('jwt_token')
+  if (jwtToken === undefined) {
+    return <Redirect to="/login" />
   }
+
+  return (
+    <>
+      <Header />
+      <div className="home-container">
+        <Carousel />
+      </div>
+    </>
+  )
 }
 
 export default Home
