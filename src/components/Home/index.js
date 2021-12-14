@@ -3,6 +3,7 @@ import {Redirect} from 'react-router-dom'
 
 import Header from '../Header'
 import Carousel from '../Carousel'
+import PopularRestaurants from '../PopularRestaurants'
 import Footer from '../Footer'
 
 import './index.css'
@@ -18,6 +19,7 @@ const Home = () => {
       <Header />
       <div className="home-container">
         <Carousel />
+        <PopularRestaurants />
       </div>
       <Footer />
     </>
