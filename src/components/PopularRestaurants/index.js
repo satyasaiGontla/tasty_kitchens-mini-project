@@ -28,7 +28,7 @@ class PopularRestaurants extends Component {
     restaurantsList: [],
     isLoading: false,
     activePage: 1,
-    sortedOption: sortByOptions[1].value,
+    sortOption: sortByOptions[1].value,
     totalPages: 0,
   }
 
@@ -38,11 +38,11 @@ class PopularRestaurants extends Component {
 
   getRestaurants = async () => {
     this.setState({isLoading: true})
-    const {activePage, sortedOption} = this.state
+    const {activePage, sortOption} = this.state
     const jwtToken = Cookies.get('jwt_token')
     const limit = 9
     const offset = (activePage - 1) * limit
-    const url = `https://apis.ccbp.in/restaurants-list?offset=${offset}&limit=${limit}&sort_by_rating=${sortedOption}`
+    const url = `https://apis.ccbp.in/restaurants-list?offset=${offset}&limit=${limit}&sort_by_rating=${sortOption}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -70,7 +70,7 @@ class PopularRestaurants extends Component {
   }
 
   updateOption = option => {
-    this.setState({sortedOption: option}, this.getRestaurants)
+    this.setState({sortOption: option}, this.getRestaurants)
   }
 
   decrementPage = () => {
@@ -98,11 +98,11 @@ class PopularRestaurants extends Component {
   }
 
   renderPopularRestaurants = () => {
-    const {restaurantsList, sortedOption, activePage, totalPages} = this.state
+    const {restaurantsList, sortOption, activePage, totalPages} = this.state
     return (
       <>
         <RestaurantsHeader
-          sortedOption={sortedOption}
+          sortOption={sortOption}
           sortByOptions={sortByOptions}
           updateOption={this.updateOption}
         />

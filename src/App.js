@@ -1,7 +1,8 @@
 import {Component} from 'react'
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 
 import Login from './components/Login'
+import NotFound from './components/NotFound'
 import Home from './components/Home'
 
 import ProtectedRoute from './components/ProtectedRoute'
@@ -14,6 +15,8 @@ class App extends Component {
       <Switch>
         <Route exact path="/login" component={Login} />
         <ProtectedRoute exact path="/" component={Home} />
+        <Route path="/bad-path" component={NotFound} />
+        <Redirect to="bad-path" />
       </Switch>
     )
   }
