@@ -7,6 +7,8 @@ import Cookies from 'js-cookie'
 
 import Popup from 'reactjs-popup'
 
+import CartContext from '../../context/CartContext'
+
 import './index.css'
 
 const Header = props => {
@@ -24,6 +26,24 @@ const Header = props => {
     }
     return '#334155'
   }
+
+  const renderCartItemsCount = () => (
+    <CartContext.Consumer>
+      {value => {
+        const {cartList} = value
+        const cartItemsCount = cartList.length
+        console.log(cartList)
+
+        return (
+          <>
+            {cartItemsCount > 0 && (
+              <span className="cart-count-badge">{cartList.length}</span>
+            )}
+          </>
+        )
+      }}
+    </CartContext.Consumer>
+  )
 
   return (
     <nav className="nav-header">
@@ -82,6 +102,7 @@ const Header = props => {
                     style={{color: getColor('/cart')}}
                   >
                     Cart
+                    {renderCartItemsCount()}
                   </p>
                 </Link>
                 <button
