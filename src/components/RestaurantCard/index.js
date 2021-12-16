@@ -16,7 +16,7 @@ const RestaurantCard = props => {
           <p className="restaurant-cuisine">{cuisine}</p>
           <div className="star-rating">
             <ImStarFull className="star" />
-            <p className="rating">{rating}</p>
+            <p className="total-rating">{rating}</p>
             <p className="user-total-reviews">({totalReviews} rating)</p>
           </div>
         </div>

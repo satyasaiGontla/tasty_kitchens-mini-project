@@ -1,4 +1,4 @@
-.cart-content-container {
+.cart-list-container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -14,8 +14,8 @@
   }
 }
 
-.cart-header-items {
-  text-align: center;
+.cart-title-item {
+  padding-left: 80px;
   width: 50%;
   font-family: DM Sans;
   font-style: normal;
@@ -26,20 +26,20 @@
   color: #475569;
 }
 
-.qty-price-cont {
+.qunatity-and-price {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 
 @media screen and (min-width: 786px) {
-  .qty-price-cont {
+  .qunatity-and-price {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
-.cart-header-qty {
+.cart-header-qunatity {
   text-align: center;
   width: 50%;
   font-family: DM Sans;
@@ -51,7 +51,7 @@
   color: #475569;
 }
 
-.cart-header-price {
+.cart-price {
   text-align: center;
   width: 50%;
   font-family: DM Sans;
