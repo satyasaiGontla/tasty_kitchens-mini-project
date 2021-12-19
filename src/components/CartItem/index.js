@@ -20,12 +20,12 @@ const CartItem = props => (
       }
 
       return (
-        <li className="cart-item" testid="cartItem">
-          <div className="cart-item-info" testid="cartItem">
+        <li testid="cartItem" className="cart-item">
+          <div className="cart-item-info">
             <img src={imageUrl} alt={name} className="cart-item-image" />
             <h1 className="cart-item-desktop-name">{name}</h1>
           </div>
-          <div className="cart-qty-price-cont" testid="cartItem">
+          <div className="cart-qty-price-cont">
             <h1 className="cart-item-mobile-name">{name}</h1>
             <div className="cart-qty-container">
               <button
@@ -48,9 +48,11 @@ const CartItem = props => (
                 <BsPlusSquare size={16} />
               </button>
             </div>
-            <p className="price" testid="total-price">
-              <FaRupeeSign size={12} /> {cost * quantity}
-            </p>
+            <div>
+              <p testid="total-price" className="price">
+                <FaRupeeSign size={12} /> {cost * quantity}/-
+              </p>
+            </div>
           </div>
         </li>
       )
