@@ -48,11 +48,10 @@ const CartItem = props => (
                 <BsPlusSquare size={16} />
               </button>
             </div>
-            <div>
-              <p testid="total-price" className="price">
-                <FaRupeeSign size={12} /> {cost * quantity}/-
-              </p>
-            </div>
+
+            <p className="price">
+              <FaRupeeSign /> {cost * quantity}/-
+            </p>
           </div>
         </li>
       )
